@@ -5,7 +5,7 @@ import ProfilePic from "@/assets/ProfilePic.jpg";
 
 export default function HeroSection() {
   return (
-    <section className="w-full bg-[#0a0a0a] text-white min-h-200 pt-10 pb-10 flex items-center">
+    <section className="w-full bg-black text-white min-h-200 pt-10 pb-10 flex items-center">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-10 w-full">
         
         {/* Left - Photo */}
@@ -38,7 +38,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Info Box */}
-          <div className="mt-10 border border-gray-700 rounded-2xl p-6 relative">
+          <div className="mt-10 border border-[#252525] rounded-2xl p-6 relative">
             {/* Top Badge */}
             <div className="absolute -top-3 left-4 flex items-center space-x-2 text-xs font-mono uppercase bg-[#0a0a0a] px-2">
               <span>✶</span>
@@ -59,7 +59,7 @@ export default function HeroSection() {
               </a>
               <a
                 href="#work"
-                className="border rounded-xl border-gray-600 px-6 py-2 text-sm font-semibold hover:bg-gray-800 transition"
+                className="border rounded-xl border-[#252525] px-6 py-2 text-sm font-semibold hover:bg-gray-800 transition"
               >
                 See work
               </a>
