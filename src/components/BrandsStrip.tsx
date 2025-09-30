@@ -23,11 +23,11 @@ const BRANDS: Brand[] = [
 
 function SlashBar() {
   return (
-    <div className="w-full border-y border-gray-800 overflow-hidden">
+    <div className="w-full border-y border-[#202020] overflow-hidden">
       <div className="flex whitespace-nowrap text-[10px] sm:text-xs font-mono uppercase tracking-widest animate-marquee">
         {Array.from({ length: 10 }).map((_, i) => (
           <span key={i} className="flex items-center">
-            <span className="mx-2 text-gray-400">////////////////</span>
+            <span className="mx-2 text-[#505050]">////////////////</span>
             {i % 2 === 0 ? "TLC_CNU4_16297" : "COLLABORATIONS & BRAND EXPERIENCE"}
           </span>
         ))}
@@ -42,10 +42,10 @@ const NAME_CLASS =
 
 export default function BrandsStrip() {
   return (
-    <section className="w-full bg-[#0a0a0a] text-white">
+    <section className="w-full bg-black text-white">
       <SlashBar />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-10">
         <ul className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 md:gap-16 lg:gap-20">
           {BRANDS.map((b) => (
             <li key={b.id}>

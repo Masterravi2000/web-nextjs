@@ -10,8 +10,8 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full bg-[#0a0a0a] text-white border-b border-gray-800">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <header className="w-full bg-black text-white border-b border-[#202020]">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-8">
         
         {/* Logo */}
         <div className="text-xl font-bold">@Ravi</div>
