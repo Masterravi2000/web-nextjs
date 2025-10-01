@@ -53,7 +53,7 @@ export default function HeroSection() {
             <div className="flex space-x-4">
               <a
                 href="#contact"
-                className="bg-yellow-400 rounded-xl text-black px-6 py-2 text-sm font-semibold hover:bg-yellow-300 transition"
+                className="bg-orange-600 rounded-xl text-white px-6 py-2 text-sm font-semibold hover:bg-orange-500 transition"
               >
                 Get in touch
               </a>
