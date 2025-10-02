@@ -26,7 +26,7 @@ const ProjectSection = () => {
     ];
 
     return (
-        <div className='w-full bg-black pt-10 py-10 px-20'>
+        <div className='w-full bg-black pt-18 py-30 px-20'>
             <a className='text-6xl font-semi-bold text-white p-10'>Projects</a>
             <div className='flex flex-col md:flex-row w-full gap-5 sm:px-10 pt-10'>
                 {items.map((text, index) => (

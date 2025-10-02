@@ -7,7 +7,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ text, image }: ProjectCardProps) {
   return (
-    <div className="border-2 border-[#181818] rounded-xl py-10 px-8">
+    <div className="border-2 border-[#181818] rounded-xl p-10">
       <div className="flex flex-col gap-5">
         <div className="w-10 h-10">
           <Image
@@ -18,7 +18,7 @@ export default function ProjectCard({ text, image }: ProjectCardProps) {
             className="w-full h-auto object-cover"
           />
         </div>
-        <a className="text-white font-semi-bold text-xl">{text}</a>
+        <a className="text-white font-semi-bold text-lg">{text}</a>
       </div>
     </div>
   );

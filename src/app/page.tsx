@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import BrandsStrip from "@/components/BrandsStrip";
 import AboutSection from "@/components/AboutSection";
 import ProjectSection from "@/components/ProjectSection";
+import GallerySection from "@/components/GallerySection";
 
 export const metadata = {
   title: "Portfolio",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <HeroSection />
         <BrandsStrip />
+        <GallerySection />
         <AboutSection />
         <ProjectSection />
         {children}
