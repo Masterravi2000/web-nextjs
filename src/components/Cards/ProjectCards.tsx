@@ -1,20 +1,24 @@
-// Box.jsx
 import Image from "next/image";
 
-export default function ProjectCard({ text }) {
+interface ProjectCardProps {
+  text: string;
+  image: string;
+}
+
+export default function ProjectCard({ text, image }: ProjectCardProps) {
   return (
-    <div className="border border-[#181818] rounded-xl py-10 px-8">
+    <div className="border-2 border-[#181818] rounded-xl py-10 px-8">
       <div className="flex flex-col gap-5">
         <div className="w-10 h-10">
           <Image
-            src="/StaminLogo.png"
-            alt="Profile"
-            width={20}
-            height={20}
+            src={image}
+            alt="Project Image"
+            width={40}
+            height={40}
             className="w-full h-auto object-cover"
           />
         </div>
-        <a className="text-white font-semibold text-xl">{text}</a>
+        <a className="text-white font-semi-bold text-xl">{text}</a>
       </div>
     </div>
   );
