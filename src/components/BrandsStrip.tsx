@@ -38,15 +38,15 @@ function SlashBar() {
 
 // Responsive name style
 const NAME_CLASS =
-  "mt-1 text-lg sm:text-xl md:text-2xl lg:text-4xl font-medium tracking-wide text-center";
+  "mt-1 text-lg text-white sm:text-xl md:text-2xl lg:text-4xl font-medium tracking-wide text-center";
 
 export default function BrandsStrip() {
   return (
-    <section className="w-full bg-black text-white">
+    <section className="w-full bg-black font-semi-bold text-[#707070]">
       <SlashBar />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-10">
-        <ul className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 md:gap-16 lg:gap-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-15">
+        <ul className="flex flex-wrap justify-center items-center gap-12 sm:gap-10 md:gap-16 lg:gap-30">
           {BRANDS.map((b) => (
             <li key={b.id}>
               <Link

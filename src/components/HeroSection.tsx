@@ -38,9 +38,9 @@ export default function HeroSection() {
           </h1>
 
           {/* Info Box */}
-          <div className="mt-10 border border-[#252525] rounded-2xl p-6 relative">
+          <div className="mt-10 border border-[#252525] rounded-xl p-6 relative">
             {/* Top Badge */}
-            <div className="absolute -top-3 left-4 flex items-center space-x-2 text-xs font-mono uppercase bg-[#0a0a0a] px-2">
+            <div className="absolute -top-3 left-4 flex items-center space-x-2 text-xs font-mono uppercase bg-black px-2">
               <span>✶</span>
               <span>//////////////</span>
             </div>
@@ -53,13 +53,13 @@ export default function HeroSection() {
             <div className="flex space-x-4">
               <a
                 href="#contact"
-                className="bg-orange-600 rounded-xl text-white px-6 py-2 text-sm font-semibold hover:bg-orange-500 transition"
+                className="bg-orange-600 rounded-lg text-white px-6 py-2 text-sm font-semibold hover:bg-orange-500 transition"
               >
                 Get in touch
               </a>
               <a
                 href="#work"
-                className="border rounded-xl border-[#252525] px-6 py-2 text-sm font-semibold hover:bg-gray-800 transition"
+                className="border rounded-lg border-[#252525] px-6 py-2 text-sm font-semibold hover:bg-gray-800 transition"
               >
                 See work
               </a>
