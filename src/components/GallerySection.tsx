@@ -35,7 +35,7 @@ const GallerySection = () => {
                             <Image
                                 src={src}
                                 alt={`Slide ${index}`}
-                                width={1920}
+                                width={5000}
                                 height={450}
                                 className="w-full h-full object-cover"
                             />
