@@ -19,14 +19,13 @@ const GallerySection = () => {
             <div className='w-full flex flex-row'>
                 <div className='w-[30%] border border-[#181818]'></div>
                 <div className='w-[70%] border border-[#181818] flex justify-center items-center p-15'>
-                    <a className='text-white font-semi-bold pt-20 text-9xl'>Menifest</a>
+                    <a className='text-white font-semi-bold pt-20 text-9xl pb-6'>Menifesto</a>
                 </div>
             </div>
             <div className='w-full h-[450px] overflow-hidden'>
                 <Swiper
-                    modules={[Navigation, Autoplay, EffectFade]}
+                    modules={[Navigation, EffectFade]}
                     navigation={true}
-                    autoplay={{ delay: 3000 }}
                     effect="fade"
                     loop
                     className="w-full h-full"
