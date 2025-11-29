@@ -9,9 +9,9 @@ import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 const GallerySection = () => {
 
     const images = [
-        "/StaminMeni2.png",
-        "/StaminMeni.png",
-        "/AnotherImage.png",
+        "/StaminMeni9.png",
+        "/StrengthMeni10.png",
+        "/StaminMeni10.png",
     ];
 
     return (
@@ -26,7 +26,7 @@ const GallerySection = () => {
                 <Swiper
                     modules={[Navigation, EffectFade]}
                     navigation={true}
-                    effect="fade"
+                    effect="slide"
                     loop
                     className="w-full h-full"
                 >
