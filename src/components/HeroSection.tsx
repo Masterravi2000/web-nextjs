@@ -34,7 +34,7 @@ export default function HeroSection() {
           <h1 className="text-[3.5rem] md:text-[5rem] font-extrabold leading-[1.1] tracking-tight">
             PASSIONATE <br />
             <span className="italic font-light">SOFTWARE</span> <br />
-            DEVELOPER
+            ENGINEER
           </h1>
 
           {/* Info Box */}
@@ -53,7 +53,7 @@ export default function HeroSection() {
             <div className="flex space-x-4">
               <a
                 href="#contact"
-                className="bg-orange-600 rounded-lg text-white px-6 py-2 text-sm font-semibold hover:bg-orange-500 transition"
+                className="bg-white rounded-lg text-black px-6 py-2 text-sm font-bold hover:bg-orange-500 transition"
               >
                 Get in touch
               </a>
