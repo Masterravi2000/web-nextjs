@@ -9,9 +9,36 @@ const Page = async ({ params }) => {
             id: 1,
             coverPic: '/StrengthCover2.JPG',
             logo: '',
-            image: '/Strength_Product.JPG',
+            image: '/Strength_Product4.JPG',
+            image2: '/StrengthMeni.png',
             name: "Strength",
-            about: "this is strength about"
+            about: "this is strength about",
+            features: [
+                {
+                    name: "Authentication & Security",
+                    points: ["Password hashing with bcrypt", "Temporary user creation after OTP verification to avoid repeat verification", "JWT-based access control", "Secure data storage in MongoDB"]
+                },
+                {
+                    name: "User Sports Profile",
+                    points: [" Add and manage favourite sports", "Include detailed, sport-specific information", "Update or modify profile settings anytime", "Privacy and safety tools: user report, block/unblock, post report"]
+                },
+                {
+                    name: "User Interaction",
+                    points: ["Users can search and follow each other", "Send team invitations to add users to their team", "Search history is maintained for quick access to recent searches"]
+                },
+                {
+                    name: "Feed System",
+                    points: ["Share thoughts, news, and videos as posts", "Engage through likes, comments, and shares"]
+                },
+                {
+                    name: "Explore Page",
+                    points: ["Latest sports news", "Live match scores"]
+                },
+                {
+                    name: "Teams Feature",
+                    points: ["Create and manage teams", "Team-based group chat for communication"]
+                }
+            ]
         },
         {
             id: 2,
@@ -20,6 +47,32 @@ const Page = async ({ params }) => {
             image: '',
             name: 'Stamin',
             about: '',
+            features: [
+                {
+                    name: "Authentication & Security",
+                    points: ["Password hashing with bcrypt", "Temporary user creation after OTP verification to avoid repeat verification", "JWT-based access control", "Secure data storage in MongoDB"]
+                },
+                {
+                    name: "User Sports Profile",
+                    points: [" Add and manage favourite sports", "Include detailed, sport-specific information", "Update or modify profile settings anytime", "Privacy and safety tools: user report, block/unblock, post report"]
+                },
+                {
+                    name: "User Interaction",
+                    points: ["Users can search and follow each other", "Send team invitations to add users to their team", "Search history is maintained for quick access to recent searches"]
+                },
+                {
+                    name: "Feed System",
+                    points: ["Share thoughts, news, and videos as posts", "Engage through likes, comments, and shares"]
+                },
+                {
+                    name: "Explore Page",
+                    points: ["Latest sports news", "Live match scores"]
+                },
+                {
+                    name: "Teams Feature",
+                    points: ["Create and manage teams", "Team-based group chat for communication"]
+                }
+            ]
         },
         {
             id: 3,
@@ -28,11 +81,68 @@ const Page = async ({ params }) => {
             image: '',
             name: 'Qilin',
             about: '',
+            features: [
+                {
+                    name: "Authentication & Security",
+                    points: ["Password hashing with bcrypt", "Temporary user creation after OTP verification to avoid repeat verification", "JWT-based access control", "Secure data storage in MongoDB"]
+                },
+                {
+                    name: "User Sports Profile",
+                    points: [" Add and manage favourite sports", "Include detailed, sport-specific information", "Update or modify profile settings anytime", "Privacy and safety tools: user report, block/unblock, post report"]
+                },
+                {
+                    name: "User Interaction",
+                    points: ["Users can search and follow each other", "Send team invitations to add users to their team", "Search history is maintained for quick access to recent searches"]
+                },
+                {
+                    name: "Feed System",
+                    points: ["Share thoughts, news, and videos as posts", "Engage through likes, comments, and shares"]
+                },
+                {
+                    name: "Explore Page",
+                    points: ["Latest sports news", "Live match scores"]
+                },
+                {
+                    name: "Teams Feature",
+                    points: ["Create and manage teams", "Team-based group chat for communication"]
+                }
+            ]
         }
     ]
 
     const details = show.find((element, index) => {
         return element.id === _id;
+    })
+
+    const mid = Math.floor(details.features.length / 2);
+
+    const feature1 = details.features.slice(0, mid);
+    const feature2 = details.features.slice(mid);
+
+    const featurefirsthalf = feature1?.map((f, i) => {
+        return (
+            <div className="flex flex-col pt-10 gap-1 sm:gap-3">
+                <a tabIndex={i} className="text-white text-sm font-bold sm:text-2xl">{f.name}</a>
+                {f?.points.map((p, i) => {
+                    return (
+                        <a tabIndex={i} className="text-white text-xs sm:text-lg">● {p}</a>
+                    )
+                })}
+            </div>
+        )
+    })
+
+    const feature2ndhalf = feature2.map((f, i) => {
+        return (
+            <div className="flex flex-col pt-10 gap-1 sm:gap-3">
+                <a tabIndex={i} className="text-white text-sm font-bold sm:text-2xl">{f.name}</a>
+                {f.points.map((p, j) => {
+                    return (
+                        <a key={j} tabIndex={j} className="text-white text-xs sm:text-lg">● {p}</a>
+                    )
+                })}
+            </div>
+        )
     })
 
     return (
@@ -68,22 +178,31 @@ const Page = async ({ params }) => {
             </div>
 
             {/* Service-Provided */}
-            <div className=" w-full px-14 sm:px-35 justify-between flex flex-row">
-                <div className="flex flex-col w-[50%] gap-3">
-                    <a className="text-6xl font-bold pb-6 text-white">Features</a>
-                    <a className="text-white text-xs sm:text-lg">@ Authentication System - Otp Verify, Jwt token, Password Hasing</a>
-                    <a className="text-white text-xs sm:text-lg">@ sokso sojso sjso sjos s </a>
-                    <a className="text-white text-xs sm:text-lg">@ sokso sojso sjso sjos s </a>
-                    <a className="text-white text-xs sm:text-lg">@ sokso sojso sjso sjos s </a>
-                    <a className="text-white text-xs sm:text-lg">@ sokso sojso sjso sjos s </a>
+            <div className=" w-full pb-40 px-4 sm:px-35 justify-between flex flex-row">
+                <div className="flex flex-col w-[47%]">
+                    <a className="text-2xl sm:text-6xl font-bold text-white">Features</a>
+                    {featurefirsthalf}
                 </div>
-                <div className="relative w-30 h-20 sm:w-200 sm:h-120">
+                <div className="relative w-60 sm:w-100 h-50 sm:w-200 sm:h-150">
                     <Image
                         src={details.image}
                         alt="Product sc"
                         fill
-                        className="object-cover"
+                        className="object-cover rounded-xl"
                     />
+                </div>
+            </div>
+            <div className=" w-full pb-40 px-4 sm:px-35 justify-between gap-6 sm:gap-24 flex flex-row">
+                <div className="relative w-160 h-50 sm:w-300 sm:h-150">
+                    <Image
+                        src={details.image2}
+                        alt="Product sc"
+                        fill
+                        className="object-cover rounded-4xl"
+                    />
+                </div>
+                <div className="flex flex-col w-[47%]">
+                    {feature2ndhalf}
                 </div>
             </div>
         </div>
