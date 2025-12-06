@@ -10,7 +10,7 @@ const Page = async ({ params }) => {
             coverPic: '/StrengthCover2.JPG',
             logo: '',
             image: '/Strength_Product4.JPG',
-            image2: '/StrengthMeni.png',
+            image2: '/Strength.png',
             name: "Strength",
             about: "this is strength about",
             features: [
