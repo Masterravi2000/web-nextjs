@@ -10,8 +10,8 @@ interface ProjectCardProps {
 
 export default function ProjectCard({_id, name, text, image }: ProjectCardProps) {
   return (
-    <Link href={`/ProjectPages/${_id}`}>
-    <button className="border-2 border-[#181818] rounded-xl p-10">
+    <Link className="border-2 border-[#181818] rounded-xl p-10"
+    href={`/ProjectPages/${_id}`}>
       <div className="flex flex-col gap-7">
         <div className="w-full flex gap-4 items-center flex-row">
            <div className="w-10 h-10">
@@ -27,7 +27,6 @@ export default function ProjectCard({_id, name, text, image }: ProjectCardProps)
         </div>
         <a className="text-white font-semi-bold text-lg">{text}</a>
       </div>
-    </button>
     </Link>
   );
 }

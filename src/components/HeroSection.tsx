@@ -1,13 +1,14 @@
 // src/components/HeroSection.tsx
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import ProfilePic from "@/assets/ProfilePic.jpg";
 
 export default function HeroSection() {
   return (
     <section className="w-full bg-black text-white min-h-200 pt-10 pb-10 flex items-center">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 px-10 w-full">
-        
+
         {/* Left - Photo */}
         <div className="flex justify-center md:justify-start">
           <div className="relative w-full max-w-md">
@@ -46,23 +47,36 @@ export default function HeroSection() {
             </div>
 
             <p className="text-sm leading-relaxed text-gray-300 mb-4">
-             Co-Founder & SWE @Strength | React Native, MERN | High-Performance, Scalable Solutions
+              Co-Founder & SWE @Strength | React Native, MERN | High-Performance, Scalable Solutions
             </p>
 
             {/* Buttons */}
             <div className="flex space-x-4">
-              <a
-                href="#contact"
-                className="bg-white rounded-lg text-black px-6 py-2 text-sm font-bold hover:bg-orange-500 transition"
+              <Link
+                href="https://www.linkedin.com/in/ravisharma2026/"
+                target="_blank"
+                className="border gap-3 flex flex-row border-[#252525] rounded-lg text-white px-4.5 py-2.5 text-sm font-bold hover:bg-blue-600 transition"
               >
-                Get in touch
-              </a>
-              <a
-                href="#work"
-                className="border rounded-lg border-[#252525] px-6 py-2 text-sm font-semibold hover:bg-gray-800 transition"
+                <Image
+                  src="/LinkedInLogo.PNG"
+                  alt=""
+                  width={20} height={0}
+                  className=""
+                />
+                Lets Connect
+              </Link>
+              <button
+                onClick={() => window.scrollBy({ top: 500, behavior: "smooth" })}
+                className="border gap-2 flex flex-row border-[#252525] rounded-lg text-white px-4.5 py-2.5 text-sm font-bold hover:bg-gray-800 transition"
               >
-                See work
-              </a>
+                <Image
+                  src="/WorksLogo.PNG"
+                  alt=""
+                  width={20} height={0}
+                  className=""
+                />
+                See Works
+              </button>
             </div>
           </div>
         </div>

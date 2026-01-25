@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Page = async ({ params }) => {
     const { id } = await params;
@@ -8,11 +9,14 @@ const Page = async ({ params }) => {
         {
             id: 1,
             coverPic: '/StrengthCover2.JPG',
+            logo: '/StrengthLogo2.PNG',
             Title: 'Professional Social Media For Sports.',
             name: "Strength",
             about: "Strength emerges as a comprehensive solution to the challenges faced by the sports community. The platform offers a multifaceted approach, providing users with the tools needed to connect, organize, and engage. By facilitating the creation and management of sports profiles, teams, and tournaments, Strength empowers enthusiasts to actively participate in their chosen sports. Clubs can extend their reach by establishing an online presence, allowing members to interact virtually, thus strengthening the sense of belonging.",
             image: '/Strength_Product4.JPG',
             image2: '/Strength.png',
+            github: 'https://github.com/strengthsports/Strength-Frontend',
+            website: 'https://www.yourstrength.in/',
             AllTechStackImg: '/AllTechStackImg2.png',
             TechStackImg: '/TechStackImg4.png',
             features: [
@@ -94,14 +98,18 @@ const Page = async ({ params }) => {
                 }
             ]
         },
+
         {
             id: 2,
             coverPic: '/StaminCover.PNG',
+            logo: '/StaminLogo2.PNG',
             Title: 'Personal Health & Fit Coach.',
             image: '/Stamin1st.JPG',
             image2: '/Stamin2nd.PNG',
             name: 'Stamin',
             about: 'Stamin is an AI-powered personal health, fitness, and sports coach designed to help users build and maintain a complete fitness profile. It connects with smartwatches and health devices to track physical activity, monitor key health metrics, and analyze medical and performance data. Using these insights, Stamin delivers personalized training guidance, recovery recommendations, and wellness insights to improve performance, consistency, and overall well-being.',
+            github: 'https://github.com/staminOfficial/Stamin_Frontend',
+            website: '',
             features: [
                 {
                     name: "Authentication & Security",
@@ -154,8 +162,8 @@ const Page = async ({ params }) => {
                 }
             ],
             ppt: 'https://docs.google.com/presentation/d/e/2PACX-1vQWFlKEP21frn991haDRAsfNOn7DO4za--DaCCXDH0_w5CuqMkzVwn8RBunrt0grg/pubembed?start=true&loop=true&delayms=3000',
-            AllTechStackImg: '/StaminTechStackImg1.png',
-            TechStackImg: '/StaminTechStackImg1.png',
+            AllTechStackImg: '/StaminAllTechStackImg.png',
+            TechStackImg: '/StaminTechImg1.png',
             techStack: [
                 {
                     name: "Frontend",
@@ -180,9 +188,13 @@ const Page = async ({ params }) => {
             id: 3,
             coverPic: '',
             logo: '',
+            title: '',
             image: '',
+            image2: '',
             name: 'Qilin',
             about: '',
+            github: '',
+            website: '',
             features: [
                 {
                     name: "Authentication & Security",
@@ -207,6 +219,28 @@ const Page = async ({ params }) => {
                 {
                     name: "Teams Feature",
                     points: ["Create and manage teams", "Team-based group chat for communication"]
+                }
+            ],
+            ppt: '',
+            AllTechStackImg: '',
+            TechStackImg: '',
+            techStack: [
+                {
+                    name: "Frontend",
+                    points: [
+                        "React Native Bare ensures smooth cross-platform performance",
+                        "Redux Toolkit enables fast and optimized state updates",
+                        "TypeScript improves code reliability and maintainability"
+                    ]
+                },
+                {
+                    name: "Backend",
+                    points: [
+                        "Node.js & Express provide high-performance API handling",
+                        "MVC monolithic architecture ensures clean code structure",
+                        "MongoDB, Redis & BullMQ optimize data access and background tasks",
+                        "Docker with AWS ensures scalable and reliable deployment"
+                    ]
                 }
             ]
         }
@@ -260,12 +294,12 @@ const Page = async ({ params }) => {
 
     return (
         <div className='w-full min-h-screen bg-black'>
-            <div className="pt-10" />
+            <div id="about" className="pt-10" />
             {/* Top Banner */}
             <div className='relative w-full h-50 sm:h-170'>
                 <Image
                     src={details.coverPic}
-                    alt="Project logo"
+                    alt=""
                     fill
                     className="object-cover"
                 />
@@ -275,20 +309,30 @@ const Page = async ({ params }) => {
                     </div>
                     <div className="flex justify-center flex-col w-[35%] pb-3 px-4 sm:px-10 gap-3 sm:gap-8">
                         <p className="text-white z-10 sm:text-md w-[80%] hidden sm:block">{details.about}</p>
-                        <div className="flex flex-row gap-2 z-10">
-                            <button className="rounded-full px-4 sm:px-8 bg-white">
-                                <p className="text-black z-10 font-bold text-xs sm:text-xl">For Sports.</p>
-                            </button>
-                            <button className="rounded-full sm:px-3 sm:py-2 p-0 px-2 bg-white justify-center items-center">
-                                <a className="text-black font-bold text-xs sm:text-lg">ok</a>
-                            </button>
+                        <div id="features" className="flex flex-row gap-2 z-10">
+                            {details?.github && (
+                                <Link
+                                    href={details.github}
+                                    target="_blank"
+                                    className="rounded-full border border-white flex items-center gap-3 px-3 py-2.5 bg-black"
+                                >
+                                    <Image alt="" src="/Github.PNG" width={30} height={24} />
+                                    <p className="text-white font-bold text-xs sm:text-xl pr-1">Github Link</p>
+                                </Link>
+                            )}
+                            {details?.website && (
+                                <Link href={details.website}
+                                    target="_blank" className="rounded-full sm:px-4 sm:py-2 px-2 bg-black border-1 border-white justify-center items-center">
+                                    <p className="text-white font-bold text-xs sm:text-lg">www.</p>
+                                </Link>
+                            )}
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Service-Provided */}
-            <div className=" w-full pb-40 px-4 sm:px-35 justify-between flex flex-row">
+            <div className="w-full pb-40 px-4 sm:px-35 justify-between flex flex-row">
                 <div className="flex flex-col w-[47%]">
                     <a className="text-2xl sm:text-6xl font-bold text-white">Features</a>
                     {featurefirsthalf}
@@ -315,7 +359,7 @@ const Page = async ({ params }) => {
                     {feature2ndhalf}
                 </div>
             </div>
-            <section className="w-full py-20 min-h-screen flex items-center justify-center bg-black">
+            <section id="pptx" className="w-full py-20 min-h-screen flex items-center justify-center bg-black">
                 <div className="w-[95%] h-[100vh] rounded-xl overflow-hidden shadow-2xl">
                     <iframe
                         src={details.ppt}
@@ -324,13 +368,13 @@ const Page = async ({ params }) => {
                     />
                 </div>
             </section>
-            <div className="py-20 mt-15 sm:px-30 sm:py-0 w-full flex flex-row justify-between">
+            <div id="techstack" className="py-20 mt-15 sm:px-30 sm:py-0 w-full flex flex-row justify-between">
                 <div className="flex flex-col w-[47%]">
                     <a className="text-2xl sm:text-6xl font-bold text-white">Tech Stack</a>
                     {techstackdata}
                 </div>
                 <div className="gap-4">
-                    <div className="relative mt-20 sm:w-200 sm:h-130 w-70 h-50">
+                    <div className="relative mt-10 sm:w-200 sm:h-150 w-70 h-60">
                         <Image
                             src={details.TechStackImg}
                             alt="tech-stack"
@@ -340,7 +384,7 @@ const Page = async ({ params }) => {
                     </div>
                 </div>
             </div>
-            <div className="justify-center flex flex-col items-center mt-7">
+            <div className="justify-center flex flex-col items-center">
                 <div className="relative sm:w-350 sm:h-210 w-70 h-50">
                     <Image
                         src={details.AllTechStackImg}
@@ -349,9 +393,69 @@ const Page = async ({ params }) => {
                         className="object-cover"
                     />
                 </div>
-                <div className="mt-15 w-full px-30">
-                    <a className="text-2xl sm:text-6xl font-bold text-white">Product</a>
-
+                <div className="mt-15 w-full py-10 px-30 flex-col items-center justify-center">
+                    <div className="flex justify-center w-full items-end flex-row gap-3">
+                        <Image
+                            src={details.logo}
+                            alt=""
+                            width={56} height={25} />
+                        <a className="text-2xl sm:text-5xl font-semibold text-white">{details.name}</a>
+                    </div>
+                    <div className="py-10 w-full- flex items-center justify-center gap-15">
+                        <Link href={details.github}
+                            target="_blank"
+                            className="gap-2 flex flex-row items-center justify-center">
+                            <Image
+                                src='/Github.PNG'
+                                alt=""
+                                width={20} height={25} />
+                            <p className="text-white text-xs sm:text-lg mt-0.5">Github</p>
+                        </Link>
+                        <Link href={details.website}
+                            target="_blank"
+                            className="gap-1 flex flex-row items-center justify-center">
+                            <Image
+                                src='/PlayStoreLogo.PNG'
+                                alt=""
+                                width={35} height={25} />
+                            <p className="text-white text-xs sm:text-lg mt-0.5">PlayStore</p>
+                        </Link>
+                        <Link href={details.website}
+                            target="_blank"
+                            className="flex flex-row items-center justify-center">
+                            <Image
+                                src='/AppStoreLogo.PNG'
+                                alt=""
+                                width={38} height={25} />
+                            <p className="text-white text-xs sm:text-lg mt-0.5">AppStore</p>
+                        </Link>
+                    </div>
+                    <div className="w-full h-1 border-b border-white" />
+                    <div className="py-15 w-full- flex items-center justify-center gap-30">
+                        <Link href="#features"
+                            className="gap-2 border-b-1 border-white flex flex-row items-center justify-center">
+                            <p className="text-white text-xs sm:text-lg mt-0.5">Features</p>
+                        </Link>
+                        <Link href="#about"
+                            className="gap-1 border-b-1 border-white flex flex-row items-center justify-center">
+                            <p className="text-white text-xs sm:text-lg mt-0.5">About</p>
+                        </Link>
+                        <Link href="#pptx"
+                            className="flex border-b-1 border-white flex-row items-center justify-center">
+                            <p className="text-white text-xs sm:text-lg mt-0.5">pptx</p>
+                        </Link>
+                        <Link href="#techstack"
+                            className="flex border-b-1 border-white flex-row items-center justify-center">
+                            <p className="text-white text-xs sm:text-lg mt-0.5">Tech Stack</p>
+                        </Link>
+                        <Link href="/"
+                            className="flex border-b-1 border-white flex-row items-center justify-center">
+                            <p className="text-white text-xs sm:text-lg mt-0.5">Home</p>
+                        </Link>
+                    </div>
+                    <div className="w-full- flex items-center justify-center gap-30">
+                        <p className="text-white text-xs sm:text-lg mt-0.5">@2026 {details.name}. All Rights Reserved</p>
+                    </div>
                 </div>
             </div>
         </div>

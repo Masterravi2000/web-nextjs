@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 type Brand = {
+  _id: number,
   id: string;
   src?: string; // optional: if missing -> text-only logo
   name: string;
@@ -15,10 +16,10 @@ type Brand = {
 };
 
 const BRANDS: Brand[] = [
-  { id: "strength", src: "/StrengthLogo.png", name: "Strength", alt: "Strength", href: "#", width: 30, height: 30 },
-  { id: "stamin", src: "/StaminLogo.png", name: "Stamin", alt: "Stamin", href: "#", width: 30, height: 30},
-  { id: "qilin", src: "/QilinLogo.png", name: "Qilin", alt: "Qilin", href: "#", width: 32, height: 32 },
-  { id: "luke", src: "/LukeLogo.png", name: "Luke", alt: "Luke", href: "#", width: 40, height: 40 },
+  { id: "strength", src: "/StrengthLogo.png", name: "Strength", alt: "Strength", href: "#", width: 30, height: 30, _id: 1,},
+  { id: "stamin", src: "/StaminLogo.png", name: "Stamin", alt: "Stamin", href: "#", width: 30, height: 30, _id: 2,},
+  { id: "qilin", src: "/QilinLogo.png", name: "Qilin", alt: "Qilin", href: "#", width: 32, height: 32, _id: 3,},
+  { id: "luke", src: "/LukeLogo.png", name: "Luke", alt: "Luke", href: "#", width: 40, height: 40, _id: 1,},
 ];
 
 function SlashBar() {
@@ -50,7 +51,7 @@ export default function BrandsStrip() {
           {BRANDS.map((b) => (
             <li key={b.id}>
               <Link
-                href={b.href ?? "#"}
+                href={`/ProjectPages/${b._id}`}
                 aria-label={b.alt ?? b.name}
                 className="block hover:opacity-90 transition"
               >
