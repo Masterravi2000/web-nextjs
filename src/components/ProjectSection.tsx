@@ -4,34 +4,12 @@ import ProjectCard from './Cards/ProjectCards';
 
 const ProjectSection = () => {
 
-    // const items = [
-    //     "Led the end-to-end development of a sports-centric social platform, architected to handle 10,000+ concurrent users and a total capacity of 200,000 users, ensuring scalability, high availability, and fault tolerance.",
-    //     "Stamin is an AI-driven health, fitness, and sports platform that enables users to build and maintain a comprehensive personal wellness profile. By integrating with smartwatches and allowing manual data entry, Stamin records essential metrics such as time, distance, heart rate, and medical reports.",
-    //     "Led the end-to-end development of Qilin, a Gen-Z second-hand fashion marketplace in India, engineered for scalability, security, and responsiveness while ensuring seamless UI/UX, reusability, and a sustainable user-centric shopping experience.",
-    // ];
-
-    // const project = [
-    //     {
-    //         text: "This is the first project, testing dynamic images.",
-    //         image: "/StrengthLogo.png",
-    //     },
-    //     {
-    //         text: "This is the second project, showing a different logo.",
-    //         image: "/StaminLogo.png",
-    //     },
-    //     {
-    //         text: "This is the third project, with yet another image.",
-    //         image: "/QilinLogo.png",
-    //     },
-    // ];
-
-
-        const projects = [
+    const projects = [
         {
             _id: 1,
             name: 'Strength',
             logo: "/StrengthLogo.png",
-            description : "Led the end-to-end development of a sports-centric social platform, architected to handle 10,000+ concurrent users and a total capacity of 200,000 users, ensuring scalability, high availability, and fault tolerance.",
+            description: "Led the end-to-end development of a sports-centric social platform, architected to handle 10,000+ concurrent users and a total capacity of 200,000 users, ensuring scalability, high availability, and fault tolerance.",
         },
         {
             _id: 2,
@@ -44,6 +22,12 @@ const ProjectSection = () => {
             name: 'Qilin',
             logo: "/QilinLogo.png",
             description: "Led the end-to-end development of Qilin, a Gen-Z second-hand fashion marketplace in India, engineered for scalability, security, and responsiveness while ensuring seamless UI/UX, reusability, and a sustainable user-centric shopping experience.",
+        },
+        {
+            _id: 4,
+            name: 'Skyward',
+            logo: "/SkywardLogo.PNG",
+            description: "A modern airline ticket reservation platform designed for seamless flight search and booking. The system offers secure authentication, real-time seat selection, class-based pricing, and a smooth end-to-end booking experience built with reliability and performance in mind.",
         }
     ]
 
