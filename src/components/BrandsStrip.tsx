@@ -19,7 +19,7 @@ const BRANDS: Brand[] = [
   { id: "strength", src: "/StrengthLogo.png", name: "Strength", alt: "Strength", href: "#", width: 30, height: 30, _id: 1,},
   { id: "stamin", src: "/StaminLogo.png", name: "Stamin", alt: "Stamin", href: "#", width: 30, height: 30, _id: 2,},
   { id: "qilin", src: "/QilinLogo.png", name: "Qilin", alt: "Qilin", href: "#", width: 32, height: 32, _id: 3,},
-  { id: "luke", src: "/LukeLogo.png", name: "Luke", alt: "Luke", href: "#", width: 40, height: 40, _id: 1,},
+  { id: "Skyward", src: "/SkywardLogo.png", name: "Skyward", alt: "Luke", href: "#", width: 40, height: 40, _id: 4,},
 ];
 
 function SlashBar() {
@@ -29,7 +29,7 @@ function SlashBar() {
         {Array.from({ length: 10 }).map((_, i) => (
           <span key={i} className="flex items-center">
             <span className="mx-2 text-[#505050]">////////////////</span>
-            {i % 2 === 0 ? "TLC_CNU4_16297" : "COLLABORATIONS & BRAND EXPERIENCE"}
+            {i % 2 === 0 ? "ENGINEER. LEARN. SCALE." : "PRODUCTS • SYSTEMS • IMPACT"}
           </span>
         ))}
       </div>

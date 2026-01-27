@@ -270,6 +270,91 @@ const Page = async ({ params }) => {
                     ]
                 }
             ]
+        },
+
+        {
+            id: 4,
+            coverPic: '/SkywardCoverPic.JPG',
+            logo: '/SkywardLogo.PNG',
+            Title: 'Seamless Flight Booking',
+            image: '/SkywardImg.PNG',
+            image2: '/SkywardImg2.PNG',
+            name: 'Skyward',
+            about: 'Skyward is a modern airline ticket reservation platform designed to deliver a seamless and intuitive flight booking experience. Users can securely create accounts, search flights by origin and destination, compare options, and select seats in real time. With clear pricing, aircraft details, class selection, and passenger management, Skyward ensures transparency and ease throughout the booking process. Confirmed reservations are securely stored within the user account, making Skyward a reliable and user-centric solution for smart air travel planning.',
+            github: 'https://github.com/Masterravi2000/Airline_Ticket_Reservation',
+            website: '',
+            features: [
+                {
+                    name: "Secure Authentication",
+                    points: [
+                        "Users can create accounts and log in securely",
+                        "Passwords are encrypted using Spring Security Encoder",
+                        "Ensures safe handling of user credentials"
+                    ]
+                },
+                {
+                    name: "Flight Search & Selection",
+                    points: [
+                        "Users can search flights by boarding and destination cities",
+                        "Available flights are dynamically listed based on search criteria",
+                        "Flight details including city codes are clearly displayed"
+                    ]
+                },
+                {
+                    name: "Aircraft & Pricing Display",
+                    points: [
+                        "Selected flight’s aircraft model is shown on the booking screen",
+                        "Total ticket price is displayed prominently for transparency",
+                        "Helps users make informed booking decisions"
+                    ]
+                },
+                {
+                    name: "Seat Selection System",
+                    points: [
+                        "Interactive seat layout shows selected and available seats",
+                        "Users can choose seats in real time",
+                        "Improves clarity and control during booking"
+                    ]
+                },
+                {
+                    name: "Class & Passenger Management",
+                    points: [
+                        "Users can select travel class such as Economy or Business",
+                        "Supports multiple adults and children per booking",
+                        "Pricing updates based on class and passenger count"
+                    ]
+                },
+                {
+                    name: "Reservation Management",
+                    points: [
+                        "Confirmed bookings are stored in the user account",
+                        "Users can view their reservations anytime",
+                        "Provides a centralized booking history"
+                    ]
+                }
+            ],
+            ppt: 'https://docs.google.com/presentation/d/e/2PACX-1vTrS03WMELqWypVBJXPYS3OIV0my2Gl-EJSk2hwhfohbQEWvNB4Aj2bpXs8jmRkRA/pubembed?start=true&loop=true&delayms=3000',
+            AllTechStackImg: '/SkywardAllTechImg.PNG',
+            TechStackImg: '/SkywardTechStackImg.PNG',
+            techStack: [
+                {
+                    name: "Frontend",
+                    points: [
+                        "Next.js provides a fast and SEO-friendly React framework",
+                        "TypeScript and JavaScript ensure scalable and maintainable UI development",
+                        "Client-side caching and Async Storage improve performance and data persistence"
+                    ]
+                },
+                {
+                    name: "Backend",
+                    points: [
+                        "Java with Spring Boot powers a robust backend system",
+                        "Monolithic architecture ensures clean structure and easier maintenance",
+                        "Spring Security Encoder handles secure password encryption",
+                        "MySQL is used as the primary relational database for structured data storage"
+                    ]
+                }
+            ]
         }
     ]
 
