@@ -19,7 +19,7 @@ const Page = async ({ params }) => {
             github: 'https://github.com/strengthsports/Strength-Frontend',
             website: 'https://www.yourstrength.in/',
             productType: 'app',
-            product: '/apk/Strength.apk',
+            product: 'https://github.com/strengthsports/Strength-Frontend/releases/download/V1.0.0/Strength.apk',
             AllTechStackImg: '/AllTechStackImg2.png',
             TechStackImg: '/TechStackImg4.png',
             features: [
@@ -201,7 +201,7 @@ const Page = async ({ params }) => {
             about: 'Qilin is a mobile marketplace for modern second-hand women fashion, connecting buyers and sellers around pre-loved clothing from thousands of brands. It features an AI-powered selling flow that automatically generates complete product listings from uploaded clothing images, eliminating manual form entry. Built for speed and usability, Qilin simplifies how pre-owned fashion is listed, discovered, and shared within a community-driven resale platform.',
             github: 'https://github.com/Masterravi2000/Qilin_Frontend',
             productType: 'app',
-            product: '/apk/Qilin.apk',
+            product: 'https://github.com/Masterravi2000/Qilin_Frontend/releases/download/v1.0.0/Qilin.apk',
             website: '',
             features: [
                 {
