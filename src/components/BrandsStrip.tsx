@@ -29,7 +29,7 @@ function SlashBar() {
         {Array.from({ length: 10 }).map((_, i) => (
           <span key={i} className="flex items-center">
             <span className="mx-2 text-[#505050]">////////////////</span>
-            {i % 2 === 0 ? "ENGINEER. LEARN. SCALE." : "PRODUCTS • SYSTEMS • IMPACT"}
+            {i % 2 === 0 ? "ENGINEER. LEARN. SCALE." : "TECH • QUALITY • ART"}
           </span>
         ))}
       </div>
