@@ -416,7 +416,7 @@ const Page = async ({ params }) => {
     return (
         <div className='w-full min-h-screen bg-black'>
             <div id="about" className="pt-10" />
-            {/* Top Banner */}
+          
             <div className='relative w-full h-50 sm:h-170'>
                 <Image
                     src={details.coverPic}
