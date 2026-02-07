@@ -25,7 +25,7 @@ const ProjectSection = () => {
         {
             _id: 4,
             name: 'Skyward',
-            logo: "/SkywardLogo.PNG",
+            logo: "/SkywardLogo.png",
             description: "A modern airline ticket reservation platform designed for seamless flight search and booking. The system offers secure authentication, real-time seat selection, class-based pricing, and a smooth end-to-end booking experience built with reliability and performance in mind.",
         }
     ]
