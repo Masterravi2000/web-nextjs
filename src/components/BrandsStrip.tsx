@@ -28,7 +28,7 @@ function SlashBar() {
       <div className="flex whitespace-nowrap text-[10px] sm:text-xs font-mono uppercase tracking-widest animate-marquee">
         {Array.from({ length: 10 }).map((_, i) => (
           <span key={i} className="flex items-center">
-            <span className="mx-2 text-[#505050]">////////////////</span>
+            <span className="mx-2 text-[#505050]">{'////////////////'}</span>
             {i % 2 === 0 ? "ENGINEER. LEARN. SCALE." : "TECH • QUALITY • ART"}
           </span>
         ))}

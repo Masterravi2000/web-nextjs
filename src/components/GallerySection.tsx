@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Autoplay, EffectFade, Navigation } from "swiper/modules";
+import { EffectFade, Navigation } from "swiper/modules";
 
 const GallerySection = () => {
 

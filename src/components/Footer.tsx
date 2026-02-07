@@ -5,7 +5,7 @@ export default function Footer() {
             <div className="w-full flex flex-row px-10">
                 <div className="w-full px-30 flex-col flex gap-4">
                     <a className="text-white text-4xl font-bold">@Ravi</a>
-                    <a className="text-[#808080] text-sm w-40">Let's create something out of this world!</a>
+                    <a className="text-[#808080] text-sm w-40">Let&apos;s create something out of this world!</a>
                 </div>
                 <div className="flex flex-row gap-20 w-full">
                     <div className="flex flex-col gap-15">

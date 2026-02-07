@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { projects } from "@/data/projectData";
 
 const Page = async ({ params }) => {
     const { id } = await params;
@@ -367,7 +366,7 @@ const Page = async ({ params }) => {
         }
     ]
 
-    const details = show.find((element, index) => {
+    const details = show.find((element, _ ) => {
         return element.id === _id;
     })
 
@@ -379,10 +378,10 @@ const Page = async ({ params }) => {
     const featurefirsthalf = feature1?.map((f, i) => {
         return (
             <div className="flex flex-col sm:pt-7 pt-1 gap-1 sm:gap-3">
-                <a tabIndex={i} className="text-white text-[12px] font-semibold sm:text-2xl">{f.name}</a>
+                <a key={i} className="text-white text-[12px] font-semibold sm:text-2xl">{f.name}</a>
                 {f?.points.map((p, j) => {
                     return (
-                        <a key={j} tabIndex={j} className="text-white text-[10px] sm:text-lg">● {p}</a>
+                        <a key={j} className="text-white text-[10px] sm:text-lg">● {p}</a>
                     )
                 })}
             </div>
@@ -392,10 +391,10 @@ const Page = async ({ params }) => {
     const feature2ndhalf = feature2.map((f, i) => {
         return (
             <div key={i} className="flex flex-col sm:pt-7 pt-1 gap-1 sm:gap-3">
-                <a tabIndex={i} className="text-white text-[12px] font-bold sm:text-2xl">{f.name}</a>
+                <a key={i} className="text-white text-[12px] font-bold sm:text-2xl">{f.name}</a>
                 {f.points.map((p, j) => {
                     return (
-                        <a key={j} tabIndex={j} className="text-white text-[10px] sm:text-lg">● {p}</a>
+                        <a key={j} className="text-white text-[10px] sm:text-lg">● {p}</a>
                     )
                 })}
             </div>

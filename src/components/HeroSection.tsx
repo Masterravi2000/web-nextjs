@@ -2,7 +2,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import ProfilePic from "@/assets/ProfilePic.jpg";
 
 export default function HeroSection() {
   return (
@@ -43,7 +42,7 @@ export default function HeroSection() {
             {/* Top Badge */}
             <div className="absolute -top-3 left-4 flex items-center space-x-2 text-xs font-mono uppercase bg-black px-2">
               <span>✶</span>
-              <span>//////////////</span>
+              <span>{'//////////////'}</span>
             </div>
 
             <p className="text-sm leading-relaxed text-gray-300 mb-4">
