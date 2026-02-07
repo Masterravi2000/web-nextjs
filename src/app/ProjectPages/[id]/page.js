@@ -8,12 +8,12 @@ const Page = async ({ params }) => {
     const show = [
         {
             id: 1,
-            coverPic: '/StrengthCover2.JPG',
-            logo: '/StrengthLogo2.PNG',
+            coverPic: '/StrengthCover2.jpg',
+            logo: '/StrengthLogo2.png',
             Title: 'Professional Social Media For Sports.',
             name: "Strength",
             about: "Strength emerges as a comprehensive solution to the challenges faced by the sports community. The platform offers a multifaceted approach, providing users with the tools needed to connect, organize, and engage. By facilitating the creation and management of sports profiles, teams, and tournaments, Strength empowers enthusiasts to actively participate in their chosen sports. Clubs can extend their reach by establishing an online presence, allowing members to interact virtually, thus strengthening the sense of belonging.",
-            image: '/Strength_Product4.JPG',
+            image: '/Strength_Product4.jpg',
             image2: '/Strength.png',
             github: 'https://github.com/strengthsports/Strength-Frontend',
             website: 'https://www.yourstrength.in/',
@@ -103,11 +103,11 @@ const Page = async ({ params }) => {
 
         {
             id: 2,
-            coverPic: '/StaminCover.PNG',
-            logo: '/StaminLogo2.PNG',
+            coverPic: '/StaminCover.png',
+            logo: '/StaminLogo2.png',
             Title: 'Personal Health & Fit Coach.',
-            image: '/Stamin1st.JPG',
-            image2: '/Stamin2nd.PNG',
+            image: '/Stamin1st.jpg',
+            image2: '/Stamin2nd.png',
             name: 'Stamin',
             about: 'Stamin is an AI-powered personal health, fitness, and sports coach designed to help users build and maintain a complete fitness profile. It connects with smartwatches and health devices to track physical activity, monitor key health metrics, and analyze medical and performance data. Using these insights, Stamin delivers personalized training guidance, recovery recommendations, and wellness insights to improve performance, consistency, and overall well-being.',
             github: 'https://github.com/staminOfficial/Stamin_Frontend',
@@ -191,11 +191,11 @@ const Page = async ({ params }) => {
 
         {
             id: 3,
-            coverPic: '/QilinCoverPic.PNG',
-            logo: '/QilinLogo.PNG',
+            coverPic: '/QilinCoverPic.png',
+            logo: '/QilinLogo.png',
             Title: 'Pre-loved Gn-z women Fashion',
-            image: '/QilinImg.JPG',
-            image2: '/QilinImg2.JPG',
+            image: '/QilinImg.jpg',
+            image2: '/QilinImg2.jpg',
             name: 'Qilin',
             about: 'Qilin is a mobile marketplace for modern second-hand women fashion, connecting buyers and sellers around pre-loved clothing from thousands of brands. It features an AI-powered selling flow that automatically generates complete product listings from uploaded clothing images, eliminating manual form entry. Built for speed and usability, Qilin simplifies how pre-owned fashion is listed, discovered, and shared within a community-driven resale platform.',
             github: 'https://github.com/Masterravi2000/Qilin_Frontend',
@@ -255,8 +255,8 @@ const Page = async ({ params }) => {
                 }
             ],
             ppt: 'https://docs.google.com/presentation/d/e/2PACX-1vR4mIZwEJcDkDC6eFjYSvk2TiXBtNY2h62mLB8fVpO5m1Go0O0RMkpxrZRcguNpWg/pubembed?start=true&loop=true&delayms=3000',
-            AllTechStackImg: '/QilinAllTechStackImg.PNG',
-            TechStackImg: '/QilinTechStackImg.PNG',
+            AllTechStackImg: '/QilinAllTechStackImg.png',
+            TechStackImg: '/QilinTechStackImg.png',
             techStack: [
                 {
                     name: "Frontend",
@@ -280,11 +280,11 @@ const Page = async ({ params }) => {
 
         {
             id: 4,
-            coverPic: '/SkywardCoverPic.JPG',
-            logo: '/SkywardLogo.PNG',
+            coverPic: '/SkywardCoverPic.jpg',
+            logo: '/SkywardLogo.png',
             Title: 'Seamless Flight Booking',
-            image: '/SkywardImg.PNG',
-            image2: '/SkywardImg2.PNG',
+            image: '/SkywardImg.png',
+            image2: '/SkywardImg2.png',
             name: 'Skyward',
             about: 'Skyward is a modern airline ticket reservation platform designed to deliver a seamless and intuitive flight booking experience. Users can securely create accounts, search flights by origin and destination, compare options, and select seats in real time. With clear pricing, aircraft details, class selection, and passenger management, Skyward ensures transparency and ease throughout the booking process. Confirmed reservations are securely stored within the user account, making Skyward a reliable and user-centric solution for smart air travel planning.',
             github: 'https://github.com/Masterravi2000/Airline_Ticket_Reservation',
@@ -342,8 +342,8 @@ const Page = async ({ params }) => {
                 }
             ],
             ppt: 'https://docs.google.com/presentation/d/e/2PACX-1vTrS03WMELqWypVBJXPYS3OIV0my2Gl-EJSk2hwhfohbQEWvNB4Aj2bpXs8jmRkRA/pubembed?start=true&loop=true&delayms=3000',
-            AllTechStackImg: '/SkywardAllTechImg.PNG',
-            TechStackImg: '/SkywardTechStackImg.PNG',
+            AllTechStackImg: '/SkywardAllTechImg.png',
+            TechStackImg: '/SkywardTechStackImg.png',
             techStack: [
                 {
                     name: "Frontend",
@@ -437,7 +437,7 @@ const Page = async ({ params }) => {
                                     target="_blank"
                                     className="rounded-full border border-white flex items-center justify-center sm:gap-3 gap-1.5 px-2 py-1 sm:px-3 sm:py-2.5 bg-black"
                                 >
-                                    <Image alt="" src="/Github.PNG" width={30} height={24} className="w-[13px] sm:w-[30px]" />
+                                    <Image alt="" src="/Github.png" width={30} height={24} className="w-[13px] sm:w-[30px]" />
                                     <p className="text-white font-bold text-[7px] sm:text-xl sm:pr-1">Github Link</p>
                                 </Link>
                             )}
@@ -539,7 +539,7 @@ const Page = async ({ params }) => {
                             target="_blank"
                             className="gap-2 flex flex-row items-center justify-center">
                             <Image
-                                src='/Github.PNG'
+                                src='/Github.png'
                                 alt=""
                                 width={20} height={25} />
                             <p className="text-white text-xs sm:text-lg mt-0.5">Github</p>
@@ -548,7 +548,7 @@ const Page = async ({ params }) => {
                             target="_blank"
                             className="gap-1 flex flex-row items-center justify-center">
                             <Image
-                                src='/PlayStoreLogo.PNG'
+                                src='/PlayStoreLogo.png'
                                 alt=""
                                 width={35} height={25} />
                             <p className="text-white text-xs sm:text-lg mt-0.5">PlayStore</p>
@@ -557,7 +557,7 @@ const Page = async ({ params }) => {
                             target="_blank"
                             className="flex flex-row items-center justify-center">
                             <Image
-                                src='/AppStoreLogo.PNG'
+                                src='/AppStoreLogo.png'
                                 alt=""
                                 width={38} height={25} />
                             <p className="text-white text-xs sm:text-lg mt-0.5">AppStore</p>
