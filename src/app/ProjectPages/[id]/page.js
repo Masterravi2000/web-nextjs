@@ -366,7 +366,8 @@ const Page = async ({ params }) => {
         }
     ]
 
-    const details = show.find((element, _ ) => {
+    const details = show.find((element, index ) => {
+        console.log(index)
         return element.id === _id;
     })
 
@@ -377,8 +378,8 @@ const Page = async ({ params }) => {
 
     const featurefirsthalf = feature1?.map((f, i) => {
         return (
-            <div className="flex flex-col sm:pt-7 pt-1 gap-1 sm:gap-3">
-                <a key={i} className="text-white text-[12px] font-semibold sm:text-2xl">{f.name}</a>
+            <div key={i} className="flex flex-col sm:pt-7 pt-1 gap-1 sm:gap-3">
+                <a className="text-white text-[12px] font-semibold sm:text-2xl">{f.name}</a>
                 {f?.points.map((p, j) => {
                     return (
                         <a key={j} className="text-white text-[10px] sm:text-lg">● {p}</a>
