@@ -57,7 +57,7 @@ export default function HeroSection() {
                 className="border gap-3 flex flex-row border-[#252525] rounded-lg text-white px-4.5 py-2.5 text-sm font-bold hover:bg-blue-600 transition"
               >
                 <Image
-                  src="/LinkedInLogo.PNG"
+                  src="/LinkedInLogo.png"
                   alt=""
                   width={20} height={0}
                   className=""
@@ -69,7 +69,7 @@ export default function HeroSection() {
                 className="border gap-2 flex flex-row border-[#252525] rounded-lg text-white px-4.5 py-2.5 text-sm font-bold hover:bg-gray-800 transition"
               >
                 <Image
-                  src="/WorksLogo.PNG"
+                  src="/WorksLogo.png"
                   alt=""
                   width={20} height={0}
                   className=""
