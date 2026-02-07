@@ -23,9 +23,9 @@ export default function ProjectCard({_id, name, text, image }: ProjectCardProps)
             className="w-full h-auto object-cover"
           />
         </div>
-        <a className="text-3xl font-semiBold pt-1 text-white">{name}</a>
+        <h3 className="text-3xl font-semiBold pt-1 text-white">{name}</h3>
         </div>
-        <a className="text-white font-semi-bold text-lg">{text}</a>
+        <p className="text-white font-semi-bold text-lg">{text}</p>
       </div>
     </Link>
   );

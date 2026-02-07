@@ -380,9 +380,9 @@ const Page = async ({ params }) => {
         return (
             <div className="flex flex-col sm:pt-7 pt-1 gap-1 sm:gap-3">
                 <a tabIndex={i} className="text-white text-[12px] font-semibold sm:text-2xl">{f.name}</a>
-                {f?.points.map((p, i) => {
+                {f?.points.map((p, j) => {
                     return (
-                        <a tabIndex={i} className="text-white text-[10px] sm:text-lg">● {p}</a>
+                        <a key={j} tabIndex={j} className="text-white text-[10px] sm:text-lg">● {p}</a>
                     )
                 })}
             </div>

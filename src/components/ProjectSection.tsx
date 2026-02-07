@@ -9,19 +9,19 @@ const ProjectSection = () => {
             _id: 1,
             name: 'Strength',
             logo: "/StrengthLogo.png",
-            description: "Led the end-to-end development of a sports-centric social platform, architected to handle 10,000+ concurrent users and a total capacity of 200,000 users, ensuring scalability, high availability, and fault tolerance.",
+            description: "Strength is a professional sports focused social media platform that connects athletes, teams, and clubs, enabling them to showcase their sports identity, engage with the community, and grow their presence through structured profiles, posts, and team collaboration.",
         },
         {
             _id: 2,
             name: 'Stamin',
             logo: "/StaminLogo.png",
-            description: "Stamin is an AI-driven health, fitness, and sports platform that enables users to build and maintain a comprehensive personal wellness profile. By integrating with smartwatches and allowing manual data entry, Stamin records essential metrics such as time, distance, heart rate, and medical reports.",
+            description: "Stamin is an AI-driven health, fitness, and sports platform that helps users build a personal fitness profile. It integrates smartwatch data and manual inputs to track metrics like time, distance, heart rate, and medical reports, which the AI uses to deliver personalized fitness and health guidance.",
         },
         {
             _id: 3,
             name: 'Qilin',
             logo: "/QilinLogo.png",
-            description: "Led the end-to-end development of Qilin, a Gen-Z second-hand fashion marketplace in India, engineered for scalability, security, and responsiveness while ensuring seamless UI/UX, reusability, and a sustainable user-centric shopping experience.",
+            description: "Qilin is a Gen-Z focused second-hand fashion marketplace in India, featuring an AI-powered image-based product listing flow and a scalable, responsive mobile experience built with a strong focus on clean architecture, performance, and reusable UI components.",
         },
         {
             _id: 4,

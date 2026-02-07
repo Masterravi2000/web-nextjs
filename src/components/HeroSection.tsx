@@ -14,7 +14,7 @@ export default function HeroSection() {
           <div className="relative w-full max-w-md">
             <div className="overflow-hidden border-[6px] rounded-2xl border-[#0a0a0a] bg-white">
               <Image
-                src="/ProfilePic2.JPEG" // 👈 replace with your photo
+                src="/ProfilePic2.jpg" // 👈 replace with your photo
                 alt="Profile"
                 width={800}
                 height={800}
@@ -47,7 +47,7 @@ export default function HeroSection() {
             </div>
 
             <p className="text-sm leading-relaxed text-gray-300 mb-4">
-              Co-Founder & SWE @Strength | React Native, MERN | High-Performance, Scalable Solutions | Good Forward deployed engineer
+              Software Engineer @ Strength | React Native • MERN Stack | Production-Focused, Scalable Systems | Forward Deployed Engineer
             </p>
 
             {/* Buttons */}
