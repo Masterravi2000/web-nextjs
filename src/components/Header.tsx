@@ -37,7 +37,7 @@ export default function Header() {
           <a href="#Projects" className="hover:text-gray-400">Projects</a>
           <a href="#Manifest" className="hover:text-gray-400">Manifest</a>
           <a href="#About" className="hover:text-gray-400">About</a>
-          <a href="/Ravi_Sharma_Resume.PDF" download className="hover:text-gray-400">Resume</a>
+          <a href="/Ravi_Sharma_Resume.pdf" download className="hover:text-gray-400">Resume</a>
         </nav>
 
         {/* Right side */}
