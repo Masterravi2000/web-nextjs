@@ -46,7 +46,7 @@ export default function HeroSection() {
             </div>
 
             <p className="text-sm leading-relaxed text-gray-300 mb-4">
-              Software Engineer @ Strength | React Native • MERN Stack | Production-Focused, Scalable Systems | Product Manager | Product Manager | Forward Deployed Engineer
+              Software Engineer | Full Stack Developer | React Native • MERN Stack | Production-Focused, Scalable Systems | Product Manager | Forward Deployed Engineer
             </p>
 
             {/* Buttons */}
