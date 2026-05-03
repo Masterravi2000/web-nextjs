@@ -13,7 +13,7 @@ export default function HeroSection() {
           <div className="relative w-full max-w-md">
             <div className="overflow-hidden border-[6px] rounded-2xl border-[#0a0a0a] bg-white">
               <Image
-                src="/ProfilePic2.jpg" // 👈 replace with your photo
+                src="/ProfilePic2.jpeg" // 👈 replace with your photo
                 alt="Profile"
                 width={800}
                 height={800}
