@@ -19,7 +19,7 @@ const BRANDS: Brand[] = [
   { id: "strength", src: "/StrengthLogo.png", name: "Strength", alt: "Strength", href: "#", width: 30, height: 30, _id: 1,},
   { id: "stamin", src: "/StaminLogo.png", name: "Stamin", alt: "Stamin", href: "#", width: 30, height: 30, _id: 2,},
   { id: "qilin", src: "/QilinLogo.png", name: "Qilin", alt: "Qilin", href: "#", width: 32, height: 32, _id: 3,},
-  { id: "Skyward", src: "/SkywardLogo.png", name: "Skyward", alt: "Luke", href: "#", width: 40, height: 40, _id: 4,},
+  { id: "fishpay", src: "/FishPayLogo.png", name: "FishPay", alt: "FishPay", href: "#", width: 40, height: 40, _id: 4,},
 ];
 
 function SlashBar() {
