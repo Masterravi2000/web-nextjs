@@ -18,8 +18,8 @@ const ProjectSection = () => {
         },
         {
             _id: 3,
-            name: 'Qilin',
-            logo: "/QilinLogo.png",
+            name: 'Nexdoc',
+            logo: "/logodoc.png",
             description: "Qilin is a Gen-Z focused second-hand fashion marketplace in India, featuring an AI-powered image-based product listing flow and a scalable, responsive mobile experience built with a strong focus on clean architecture, performance, and reusable UI components.",
         },
         {

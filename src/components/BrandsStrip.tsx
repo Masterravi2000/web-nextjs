@@ -3,23 +3,22 @@ import Image from "next/image";
 import Link from "next/link";
 
 type Brand = {
-  _id: number,
+  _id: number;
   id: string;
   src?: string; // optional: if missing -> text-only logo
   name: string;
   alt?: string;
   href?: string;
-  width?: number; // image width (if src provided)
-  height?: number; // image height (if src provided)
+  scale?: number; // optional: per-logo visual size correction (default 1)
   wrapperClass?: string;
   textClass?: string;
 };
 
 const BRANDS: Brand[] = [
-  { id: "strength", src: "/StrengthLogo.png", name: "Strength", alt: "Strength", href: "#", width: 30, height: 30, _id: 1,},
-  { id: "stamin", src: "/StaminLogo.png", name: "Stamin", alt: "Stamin", href: "#", width: 30, height: 30, _id: 2,},
-  { id: "qilin", src: "/QilinLogo.png", name: "Qilin", alt: "Qilin", href: "#", width: 32, height: 32, _id: 3,},
-  { id: "fishpay", src: "/FishPayLogo.png", name: "FishPay", alt: "FishPay", href: "#", width: 40, height: 40, _id: 4,},
+  { id: "strength", src: "/StrengthLogo.png", name: "Strength", alt: "Strength", href: "#", scale: 0.85, _id: 1 },
+  { id: "stamin", src: "/StaminLogo.png", name: "Stamin", alt: "Stamin", href: "#", scale: 0.90, _id: 2 },
+  { id: "nexdoc", src: "/logodoc.png", name: "Nexdoc", alt: "Nexdoc", href: "#", scale: 1.1, _id: 3 },
+  { id: "fishpay", src: "/FishPayLogo.png", name: "FishPay", alt: "FishPay", href: "#", scale: 1.5, _id: 4 },
 ];
 
 function SlashBar() {
@@ -41,6 +40,9 @@ function SlashBar() {
 const NAME_CLASS =
   "mt-1 text-lg text-white sm:text-xl md:text-2xl lg:text-4xl font-medium tracking-wide text-center";
 
+// Fixed logo box size (all logos scale to fit this, regardless of source padding)
+const LOGO_BOX_CLASS = "w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10";
+
 export default function BrandsStrip() {
   return (
     <section className="w-full bg-black font-semi-bold text-[#707070]">
@@ -57,14 +59,23 @@ export default function BrandsStrip() {
               >
                 {b.src ? (
                   <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
-                    <div className={`flex-shrink-0 ${b.wrapperClass ?? ""}`}>
-                      <Image
-                        src={b.src}
-                        alt={b.alt ?? b.name}
-                        width={b.width ?? 64}
-                        height={b.height ?? 40}
-                        className="object-contain w-10 h-10 sm:w-auto sm:h-auto"
-                      />
+                    <div
+                      className={`relative flex-shrink-0 flex items-center justify-center ${LOGO_BOX_CLASS} ${b.wrapperClass ?? ""}`}
+                    >
+                      <div
+                        className="relative"
+                        style={{
+                          width: `${(b.scale ?? 1) * 100}%`,
+                          height: `${(b.scale ?? 1) * 100}%`,
+                        }}
+                      >
+                        <Image
+                          src={b.src}
+                          alt={b.alt ?? b.name}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
                     </div>
                     <span className={NAME_CLASS}>{b.name}</span>
                   </div>

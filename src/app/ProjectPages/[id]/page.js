@@ -194,91 +194,98 @@ const Page = async ({ params }) => {
 
     {
       id: 3,
-      coverPic: "/QilinCoverPic.png",
-      logo: "/QilinLogo.png",
-      Title: "Pre-loved Gn-z women Fashion",
-      image: "/QilinImg.jpg",
-      image2: "/QilinImg2.jpg",
-      name: "Qilin",
+      coverPic: "/Nexdoc/NexdocCoverPic.png",
+      logo: "/logodoc.png",
+      Title: "Contexual Document Searching",
+      image: "/Nexdoc/nexdoc-img-1.png",
+      image2: "/Nexdoc/nexdoc-img-2.png",
+      name: "Nexdoc",
       about:
-        "Qilin is a mobile marketplace for modern second-hand women fashion, connecting buyers and sellers around pre-loved clothing from thousands of brands. It features an AI-powered selling flow that automatically generates complete product listings from uploaded clothing images, eliminating manual form entry. Built for speed and usability, Qilin simplifies how pre-owned fashion is listed, discovered, and shared within a community-driven resale platform.",
-      github: "https://github.com/Masterravi2000/Qilin_Frontend",
-      productType: "app",
+        "Nexdoc is an offline-first document intelligence and search engine that lets professional firms search across their local documents without sending data to the cloud. It processes PDFs, images, PPTX, TXT, and XLS files through a multi-threaded pipeline, generates semantic embeddings locally, and stores them in LanceDB for fast, context-aware retrieval with an optional AI mode for synthesized, source-cited answers.",
+      github: "https://github.com/Masterravi2000/Nexdoc",
+      productType: "Desktop Application",
       product:
-        "https://github.com/Masterravi2000/Qilin_Frontend/releases/download/v1.0.0/Qilin.apk",
+        "https://github.com/Masterravi2000/Nexdoc/releases/download/doc_search/Nexdoc.Setup.0.0.0.exe",
       website: "",
       features: [
         {
-          name: "Payment Processing & Verification",
+          name: "Multi-Format Document Processing",
           points: [
-            "Merchants can create Razorpay orders through simple REST APIs",
-            "Payment signatures are verified on the backend before confirmation",
-            "Verified payments are persisted securely in PostgreSQL",
+            "Supports PDF, image (OCR), PPTX, TXT, and XLS/XLSX formats",
+            "Dynamic worker pool scales concurrency to available CPU cores",
+            "Real-time file detection via Watchdog-based file watching",
           ],
         },
         {
-          name: "Async Invoice Generation",
+          name: "Document Intelligence",
           points: [
-            "Invoice PDFs are auto-generated after every successful payment",
-            "PDF creation and upload run as a background task after response",
-            "Reduces payment confirmation latency from ~3s to under 750ms",
+            "Text extraction, cleaning, and sentence-aware chunking",
+            "Topic extraction and file metadata capture per document",
+            "Local semantic embeddings using Sentence Transformers",
           ],
         },
         {
-          name: "Invoice Storage",
+          name: "Semantic Search & Ranking",
           points: [
-            "Generated invoice PDFs are uploaded and stored on Cloudinary",
-            "Invoice URLs are saved against each payment record in PostgreSQL",
-            "Invoices remain available for download anytime after generation",
+            "Vector similarity search against locally stored embeddings",
+            "Hybrid filtering narrows candidates before final ranking",
+            "Context-aware retrieval returns the most relevant chunks",
           ],
         },
         {
-          name: "Refund Management",
+          name: "Offline & AI Search Modes",
           points: [
-            "Merchants can raise refunds directly through the refund API",
-            "Refund status is synced with Razorpay in real time",
-            "Complete refund history is available for every transaction",
+            "Offline mode returns ranked results with zero internet dependency",
+            "AI mode synthesizes answers via Gemini API with cited sources",
+            "Users can toggle between modes based on connectivity or need",
           ],
         },
         {
-          name: "Transaction History & Analytics",
+          name: "Storage & Persistence",
           points: [
-            "Paginated APIs expose payment, invoice, and refund history",
-            "Surface-level statistics like totals and trends are available",
-            "Gives merchants visibility into their payment operations",
+            "LanceDB stores embeddings alongside document content and metadata",
+            "SQLite tracks processing status, statistics, and recent searches",
+            "All data persists locally with no external database dependency",
           ],
         },
         {
-          name: "Webhook Reconciliation",
+          name: "Privacy-First Architecture",
           points: [
-            "Razorpay webhooks are used to independently verify payment events",
-            "Backend reconciles payment state even if the client disconnects",
-            "Ensures consistency between Razorpay and FishPay's database",
+            "Core pipeline runs entirely on the user's machine",
+            "Sensitive documents never leave local storage during processing",
+            "AI mode is the only optional, internet-dependent capability",
           ],
         },
       ],
-      ppt: "https://docs.google.com/presentation/d/e/2PACX-1vR4mIZwEJcDkDC6eFjYSvk2TiXBtNY2h62mLB8fVpO5m1Go0O0RMkpxrZRcguNpWg/pubembed?start=true&loop=true&delayms=3000",
-      AllTechStackImg: "/QilinAllTechStackImg.png",
-      TechStackImg: "/QilinTechStackImg.png",
+      ppt: "https://docs.google.com/presentation/d/e/2PACX-1vRzVlEkRPmP_4mzsIG-6nkyy3sabHqiQHr76dWGbKr4XpK7PQI9JizSMj9Vv9JaTA/pubembed?start=true&loop=true&delayms=3000",
+      AllTechStackImg: "/Nexdoc/NexdocAllTechStackImg.png",
+      TechStackImg: "/Nexdoc/NexdocTechStackImg.png",
+      // Nexdoc example
       techStack: [
         {
-          name: "Frontend",
+          name: "Core Backend",
+          points: ["Python", "FastAPI", "Uvicorn", "Pydantic"],
+        },
+        {
+          name: "AI & Document Processing",
           points: [
-            "React Native Bare ensures smooth cross-platform performance",
-            "Redux Toolkit enables fast and optimized state updates",
-            "TypeScript improves code reliability and maintainability",
+            "Sentence Transformers (all-MiniLM-L12-v2)",
+            "PyTorch",
+            "PyMuPDF, pytesseract, python-pptx, pandas, openpyxl",
           ],
         },
         {
-          name: "Backend",
-          points: [
-            "Node.js & Express provide high-performance API handling",
-            "MVC monolithic architecture ensures clean code structure",
-            "MongoDB, Redis & BullMQ optimize data access and background tasks",
-            "Docker with AWS ensures scalable and reliable deployment",
-          ],
+          name: "Storage & Infra",
+          points: ["LanceDB", "SQLite", "Watchdog", "PyInstaller"],
         },
       ],
+      systemDesignFullView: "/Nexdoc/Nexdoc-System-Design.png",
+      coreSystemImg: "/Nexdoc/nexdoc-system.png",
+      coreSystemDescription:
+        "When a document is uploaded, it's stored locally and picked up by a Watchdog file watcher, which pushes it onto a processing queue. A dynamically sized worker pool scaled to the machine's available CPU cores pulls files from the queue and routes each to the appropriate processor based on format. Extracted text is cleaned, chunked, and converted into embeddings via a local Sentence Transformer model, then persisted in LanceDB alongside document metadata. At query time, the same embedding model encodes the user's search, retrieves candidates via vector similarity, filters and ranks them, and returns either raw ranked results (offline mode) or a synthesized, source-cited answer via the Gemini API (AI mode).",
+      deploymentDescription:
+        "Nexdoc follows a layered Controllers → Services → Features → Repositories architecture on FastAPI, keeping API handling, business logic, and persistence cleanly separated. The Python backend is packaged using PyInstaller and bundled as a local sidecar process inside an Electron desktop frontend, so the entire application UI, backend, and vector database runs on the user's machine with no external server deployment required.",
+      // testingResults omitted — not done yet, so section stays hidden
     },
 
     {
@@ -374,7 +381,7 @@ const Page = async ({ params }) => {
       coreSystemDescription:
         "When a merchant creates an order, the backend calls Razorpay and returns an order ID to the client. On payment completion, the client sends the payment ID and signature to the verify endpoint, which validates the cryptographic signature and persists the payment in PostgreSQL before responding immediately. Invoice PDF generation and Cloudinary upload run asynchronously in a background thread afterward, cutting confirmation latency from ~3s to under 750ms. Razorpay webhooks independently reconcile payment and refund events in case the client disconnects, with retry logic handling cases where the webhook arrives before the database write completes.",
       deploymentDescription:
-          "FishPay follows a layered Controller → Service → Repository architecture on Spring Boot, containerized using a multi-stage Docker build. The first stage uses Maven with a full JDK to resolve dependencies and compile the project into a jar; the second stage discards Maven and the build toolchain entirely, copying over only the compiled jar into a fresh runtime image, keeping the final image free of build-time dependencies. The backend is deployed on Render, PostgreSQL is hosted separately on Neon, and generated invoice PDFs are stored on Cloudinary."
+        "FishPay follows a layered Controller → Service → Repository architecture on Spring Boot, containerized using a multi-stage Docker build. The first stage uses Maven with a full JDK to resolve dependencies and compile the project into a jar; the second stage discards Maven and the build toolchain entirely, copying over only the compiled jar into a fresh runtime image, keeping the final image free of build-time dependencies. The backend is deployed on Render, PostgreSQL is hosted separately on Neon, and generated invoice PDFs are stored on Cloudinary.",
       // testingResults omitted — not done yet, so section stays hidden
     },
   ];
@@ -569,9 +576,7 @@ const Page = async ({ params }) => {
             </a>
             {details.techStack.map((f, i) => (
               <div key={i} className="flex flex-col gap-4">
-                <span className="text-white text-sm sm:text-2xl">
-                  {f.name}
-                </span>
+                <span className="text-white text-sm sm:text-2xl">{f.name}</span>
                 <div className="flex flex-wrap gap-2">
                   {f.points.map((p, j) => (
                     <span
@@ -679,15 +684,15 @@ const Page = async ({ params }) => {
       )}
 
       <div className="justify-center flex flex-col items-center">
-        {details.techStack===null ? (
-                    <div className="relative sm:w-350 sm:h-210 w-70 h-50">
-          <Image
-            src={details.AllTechStackImg}
-            alt="tech-stack"
-            fill
-            className="object-cover"
-          />
-        </div>
+        {details.techStack === null ? (
+          <div className="relative sm:w-350 sm:h-210 w-70 h-50">
+            <Image
+              src={details.AllTechStackImg}
+              alt="tech-stack"
+              fill
+              className="object-cover"
+            />
+          </div>
         ) : null}
 
         {/* Footer */}
