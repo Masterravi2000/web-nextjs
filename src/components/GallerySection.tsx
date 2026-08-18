@@ -10,8 +10,9 @@ const GallerySection = () => {
 
     const images = [
         "/StaminMeni9.png",
-        "/QilinMeni.png",
+        "/NexdocMeni.png",
         "/StrengthBanner.png",
+        "/FishPayMeni.png",
         "/StaminMeni10.png",
     ];
 
