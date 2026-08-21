@@ -7,7 +7,7 @@ const Page = async ({ params }) => {
 
   const show = [
     {
-      id: 1,
+      id: 3,
       coverPic: "/StrengthCover2.jpg",
       logo: "/StrengthLogo2.png",
       Title: "Professional Social Media For Sports.",
@@ -105,7 +105,7 @@ const Page = async ({ params }) => {
     },
 
     {
-      id: 2,
+      id: 4,
       coverPic: "/StaminCover.png",
       logo: "/StaminLogo2.png",
       Title: "Personal Health & Fit Coach.",
@@ -195,7 +195,7 @@ const Page = async ({ params }) => {
     },
 
     {
-      id: 3,
+      id: 1,
       coverPic: "/Nexdoc/NexdocCoverPic.png",
       logo: "/logodoc.png",
       Title: "Contexual Document Searching",
@@ -292,7 +292,7 @@ const Page = async ({ params }) => {
     },
 
     {
-      id: 4,
+      id: 2,
       coverPic: "/FishPay/FishPayCoverPic.png",
       logo: "/FishPay/FishPayLogo.png",
       Title: "Payment Management System",
