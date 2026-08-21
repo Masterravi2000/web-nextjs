@@ -15,10 +15,10 @@ type Brand = {
 };
 
 const BRANDS: Brand[] = [
+    { id: "nexdoc", src: "/logodoc.png", name: "Nexdoc", alt: "Nexdoc", href: "#", scale: 1.1, _id: 3 },
+  { id: "fishpay", src: "/FishPayLogo.png", name: "FishPay", alt: "FishPay", href: "#", scale: 1.5, _id: 4 },
   { id: "strength", src: "/StrengthLogo.png", name: "Strength", alt: "Strength", href: "#", scale: 0.85, _id: 1 },
   { id: "stamin", src: "/StaminLogo.png", name: "Stamin", alt: "Stamin", href: "#", scale: 0.90, _id: 2 },
-  { id: "nexdoc", src: "/logodoc.png", name: "Nexdoc", alt: "Nexdoc", href: "#", scale: 1.1, _id: 3 },
-  { id: "fishpay", src: "/FishPayLogo.png", name: "FishPay", alt: "FishPay", href: "#", scale: 1.5, _id: 4 },
 ];
 
 function SlashBar() {

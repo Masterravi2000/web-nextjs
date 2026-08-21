@@ -18,6 +18,7 @@ const Page = async ({ params }) => {
       image2: "/Strength.png",
       github: "https://github.com/strengthsports/Strength-Frontend",
       website: "https://www.yourstrength.in/",
+      video: "",
       productType: "app",
       product:
         "https://github.com/strengthsports/Strength-Frontend/releases/download/V1.0.0/Strength.apk",
@@ -117,6 +118,7 @@ const Page = async ({ params }) => {
       productType: "",
       product: "",
       website: "",
+      video: "",
       features: [
         {
           name: "Authentication & Security",
@@ -207,6 +209,7 @@ const Page = async ({ params }) => {
       product:
         "https://github.com/Masterravi2000/Nexdoc/releases/download/doc_search/Nexdoc.Setup.0.0.0.exe",
       website: "",
+      video: "https://youtube.com/shorts/CQ2-JIcX1aA?si=_liPUZi2nIzNuIey",
       features: [
         {
           name: "Multi-Format Document Processing",
@@ -303,6 +306,7 @@ const Page = async ({ params }) => {
       product:
         "https://github.com/Masterravi2000/FishPay_Frontend/releases/download/payment-system-demo/FishPayDemo.apk",
       website: "",
+      video: "https://youtube.com/shorts/cCNtxR2j7tU?si=nLnzk7A_H75bnOGm",
       features: [
         {
           name: "Payment Processing & Verification",
@@ -480,14 +484,14 @@ const Page = async ({ params }) => {
                   </p>
                 </Link>
               )}
-              {details?.website && (
+              {details?.video && (
                 <Link
-                  href={details.website}
+                  href={details.video}
                   target="_blank"
                   className="rounded-full sm:px-4 sm:py-2 sm:px-2 bg-black border-1 border-white flex justify-center items-center"
                 >
                   <p className="text-white font-bold text-[7px] px-2 py-1 sm:text-lg">
-                    www.
+                    Video
                   </p>
                 </Link>
               )}
