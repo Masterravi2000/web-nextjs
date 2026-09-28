@@ -33,6 +33,15 @@ const BRANDS: Brand[] = [
     scale: 1.5,
     _id: 2,
   },
+   {
+    id: "meetingest",
+    src: "/MeetIngestLogo.png",
+    name: "MeetIngest",
+    alt: "MeetIngest",
+    href: "#",
+    scale: 1.5,
+    _id: 3,
+  },
   {
     id: "strength",
     src: "/StrengthLogo.png",
@@ -40,7 +49,7 @@ const BRANDS: Brand[] = [
     alt: "Strength",
     href: "#",
     scale: 0.85,
-    _id: 3,
+    _id: 4,
   },
   {
     id: "stamin",
@@ -49,7 +58,7 @@ const BRANDS: Brand[] = [
     alt: "Stamin",
     href: "#",
     scale: 0.9,
-    _id: 4,
+    _id: 5,
   },
 ];
 
@@ -80,7 +89,7 @@ export default function BrandsStrip() {
     <section className="w-full bg-black font-semi-bold text-[#707070]">
       <SlashBar />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-15">
+      <div className="max-w-full mx-auto px-4 sm:px-6 py-10 sm:py-15">
         <ul className="flex flex-wrap justify-center items-center gap-12 sm:gap-10 md:gap-16 lg:gap-30">
           {BRANDS.map((b) => (
             <li key={b.id}>

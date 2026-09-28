@@ -11,6 +11,7 @@ const GallerySection = () => {
     const images = [
         "/StaminMeni9.png",
         "/NexdocMeni.png",
+        "/MeetIngestMeni.png",
         "/StrengthBanner.png",
         "/FishPayMeni.png",
         "/StaminMeni10.png",

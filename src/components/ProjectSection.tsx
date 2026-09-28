@@ -18,12 +18,18 @@ const ProjectSection = () => {
         },
         {
             _id: 3,
+            name: 'MeetIngest',
+            logo: "/MeetIngestLogo.png",
+            description: "MeetIngest is a headless meeting bot that joins live Google Meet calls, taps each participant's WebRTC audio and video streams, identifies who every stream belongs to, and produces an isolated, audio-video synced recording per participant along with a join/leave timeline",
+        },
+        {
+            _id: 4,
             name: 'Strength',
             logo: "/StrengthLogo.png",
             description: "Strength is a professional sports focused social media platform that connects athletes, teams, and clubs, enabling them to showcase their sports identity, engage with the community, and grow their presence through structured profiles, posts, and team collaboration.",
         },
         {
-            _id: 4,
+            _id: 5,
             name: 'Stamin',
             logo: "/StaminLogo.png",
             description: "Stamin is an AI-driven health, fitness, and sports platform that helps users build a personal fitness profile. It integrates smartwatch data and manual inputs to track metrics like time, distance, heart rate, and medical reports, which the AI uses to deliver personalized fitness and health guidance.",

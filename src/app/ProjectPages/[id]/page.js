@@ -7,7 +7,7 @@ const Page = async ({ params }) => {
 
   const show = [
     {
-      id: 3,
+      id: 4,
       coverPic: "/StrengthCover2.jpg",
       logo: "/StrengthLogo2.png",
       Title: "Professional Social Media For Sports.",
@@ -105,7 +105,7 @@ const Page = async ({ params }) => {
     },
 
     {
-      id: 4,
+      id: 5,
       coverPic: "/StaminCover.png",
       logo: "/StaminLogo2.png",
       Title: "Personal Health & Fit Coach.",
@@ -387,6 +387,102 @@ const Page = async ({ params }) => {
       deploymentDescription:
         "FishPay follows a layered Controller → Service → Repository architecture on Spring Boot, containerized using a multi-stage Docker build. The first stage uses Maven with a full JDK to resolve dependencies and compile the project into a jar; the second stage discards Maven and the build toolchain entirely, copying over only the compiled jar into a fresh runtime image, keeping the final image free of build-time dependencies. The backend is deployed on Render, PostgreSQL is hosted separately on Neon, and generated invoice PDFs are stored on Cloudinary.",
       // testingResults omitted — not done yet, so section stays hidden
+    },
+    {
+      id: 3,
+      coverPic: "/MeetIngest/MeetIngestCoverPic.png",
+      logo: "/MeetIngest/MeetIngestLogo.png",
+      Title: "Attributed Meeting Data Capture",
+      image: "/MeetIngest/imgg1.png",
+      image2: "/MeetIngest/imgg2.png",
+      name: "MeetIngest",
+      about:
+        "MeetIngest is a headless meeting bot that joins live Google Meet calls, taps each participant's WebRTC audio and video streams, identifies who every stream belongs to, and produces an isolated, audio-video synced recording per participant along with a join/leave timeline. Built as the data capture layer beneath an orchestration system, it delivers attributed per-participant data so the layer above can tell exactly who shared what, and where in the meeting it was shared.",
+      github: "https://github.com/Masterravi2000/MeetIngest#-features",
+      productType: "",
+      product: "",
+      website: "",
+      video: "YOUR_DEMO_VIDEO_LINK",
+      features: [
+        {
+          name: "Participant Identification",
+          points: [
+            "Video mapped to participants through DOM SSRC attributes",
+            "Audio mapped via active-speaker correlation within 120 ms",
+            "Screen-share presentations excluded from participant recordings",
+          ],
+        },
+        {
+          name: "Synced Per-Participant Recording",
+          points: [
+            "One canvas + MediaRecorder pipeline per participant",
+            "Audio and video captured in one container, synced at capture time",
+            "Black frame with name keeps video continuous when camera is off",
+          ],
+        },
+        {
+          name: "Correct Audio-Video Attribution",
+          points: [
+            "300 ms / 150 ms gate windows reject overlapping and ambiguous claims",
+            "120 ms strength test and 200 ms dual confirmation filter noise",
+            "Confirmed audio tracks are exclusively bonded to one participant",
+          ],
+        },
+        {
+          name: "Reliable Recording",
+          points: [
+            "Two-signal detection of mid-call WebRTC re-negotiation (~40% of meetings)",
+            "Dual-recorder hand-off keeps every recording gap-free",
+            "Chunks streamed to disk over a local WebSocket, stitched by FFmpeg",
+          ],
+        },
+        {
+          name: "Traffic Light Braking",
+          points: [
+            "RED accepts in-flight chunks, YELLOW finalizes every file on disk",
+            "GREEN leaves the call only after all recordings are safe",
+            "Shutdown cut from ~8 min to 5–25 s with zero lost recordings",
+          ],
+        },
+        {
+          name: "Replay & Combined Export",
+          points: [
+            "Recordings auto-published to Cloudinary after the meeting ends",
+            "Meet-style synced grid with animated join/leave tiles and drift correction",
+            "One-click export of the full replay as a combined 720p/30 fps .mp4",
+          ],
+        },
+      ],
+      ppt: "https://docs.google.com/presentation/d/e/2PACX-1vQIpMcYFuYS6r9RDJNvoApdINaOdm4je0xLPLhfxclDlHZCJLpigrkmd7MXhktqwQ/pubembed?start=true&loop=true&delayms=3000",
+      AllTechStackImg: "/MeetIngest/MeetIngestAllTechStackImg.png",
+      TechStackImg: "/MeetIngest/MeetIngestTechStackImg.png",
+      // MeetIngest
+      techStack: [
+        {
+          name: "Core Runtime",
+          points: ["Node.js", "Playwright", "playwright-extra (Stealth)"],
+        },
+        {
+          name: "Real-Time Media",
+          points: ["WebRTC", "MediaRecorder API", "Canvas API", "WebSockets"],
+        },
+        {
+          name: "Processing & Infra",
+          points: ["FFmpeg (H.264 / AAC)", "Cloudinary", "PowerShell"],
+        },
+      ],
+      systemDesignFullView: "/MeetIngest/system-design-banner.png",
+      coreSystemImg: "/MeetIngest/focused-point-design.png",
+      coreSystemDescription:
+        "The bot joins a Google Meet call through a Playwright-controlled Chromium browser and hooks its WebRTC peer connections to access every incoming media track. Video tracks are identified by matching each participant tile's DOM SSRC attribute, while audio tracks are identified by correlating Meet's speaking indicators with audio-level spikes and passing every candidate through a 4-strategy bonding filter before locking it to a participant. Each participant then gets a dedicated canvas + MediaRecorder pipeline that records audio and video together, streaming chunks over a local WebSocket to Node.js, which writes them as segments on disk. Mid-call re-negotiations are caught by two-signal detection and handled with a dual-recorder hand-off, and on stop a 3-phase traffic-light brake finalizes every file before FFmpeg normalizes and stitches the segments into one synced .mp4 per participant with a timeline of their join offsets.",
+      deploymentDescription:
+        "MeetIngest runs locally on Windows through a PowerShell launcher that starts the bot and converts Ctrl+C into a safe stop signal. Capture and post-processing are deliberately separated: once the bot has fully exited, a publisher process uploads the per-participant recordings to Cloudinary, generates the meeting manifest, and serves a local replay page that plays all participants in a synced Meet-style grid and can export the combined meeting as a single .mp4 — adding zero load to live recording.",
+      testingResults: {
+        "Participants Tested": "4 live",
+        "Shutdown Time": "5–25 s",
+        "Re-negotiation Handled": "~40% of meetings",
+        "Correlation Window": "≤120 ms",
+      },
     },
   ];
 
